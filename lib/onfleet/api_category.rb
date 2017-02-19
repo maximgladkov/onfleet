@@ -73,6 +73,11 @@ module Onfleet
       call(:get)
     end
 
+    def phone(phone)
+      self.category_name = "#{category_name}/phone/#{phone}"
+      call(:get)
+    end
+
     def create(args={})
       call(:post, args)
     end
